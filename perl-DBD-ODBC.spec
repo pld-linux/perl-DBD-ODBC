@@ -5,10 +5,10 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	DBD
 %define	pnam	ODBC
-Summary:	DBD::ODBC perl module
-Summary(pl):	Modu³ perla DBD::ODBC
+Summary:	DBD::ODBC Perl module - ODBC driver for DBI
+Summary(pl):	Modu³ Perla DBD::ODBC - sterownik ODBC dla DBI
 Name:		perl-DBD-ODBC
-Version:	1.04
+Version:	1.05
 Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
