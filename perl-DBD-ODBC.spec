@@ -5,12 +5,12 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	DBD
 %define	pnam	ODBC
-Summary:	DBD::ODBC perl module
-Summary(pl):	Modu³ perla DBD::ODBC
+Summary:	DBD::ODBC - ODBC Driver for DBI
+Summary(pl):	DBD::ODBC - sterownik DBI do ODBC
 Name:		perl-DBD-ODBC
 Version:	1.09
 Release:	1
-License:	GPL/Artistic
+License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	884f828eaf8d13e935a8d8b9752a07c0
@@ -20,10 +20,10 @@ BuildRequires:	unixODBC-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-DBD::ODBC - DBD module interfacing the ODBC databases.
+DBD::ODBC is DBD module interfacing the ODBC databases.
 
 %description -l pl
-DBD::ODBC - modu³ DBD komunikuj±cy siê z bazami danych z u¿yciem
+DBD::ODBC jest modu³em DBD komunikuj±cym siê z bazami danych z u¿yciem
 ODBC.
 
 %prep
