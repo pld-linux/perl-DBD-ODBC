@@ -31,7 +31,7 @@ ODBC.
 
 %build
 %{__perl} Makefile.PL -o /usr \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
