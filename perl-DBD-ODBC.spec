@@ -9,7 +9,7 @@ Summary:	DBD::ODBC perl module
 Summary(pl):	Modu³ perla DBD::ODBC
 Name:		perl-DBD-ODBC
 Version:	1.05
-Release:	2
+Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
