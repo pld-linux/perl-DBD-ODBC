@@ -8,7 +8,7 @@
 Summary:	DBD::ODBC perl module
 Summary(pl):	Modu³ perla DBD::ODBC
 Name:		perl-DBD-ODBC
-Version:	1.02
+Version:	1.04
 Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
