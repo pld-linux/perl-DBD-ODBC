@@ -1,3 +1,7 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	DBD
 %define	pnam	ODBC
@@ -35,7 +39,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%{!?_without_test:%{__make} test}
+%{!?_without_tests:%{__make} test}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
