@@ -3,8 +3,8 @@
 %bcond_without	tests	# Do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	DBD
-%define	pnam	ODBC
+%define		pdir	DBD
+%define		pnam	ODBC
 Summary:	DBD::ODBC - ODBC Driver for DBI
 Summary(pl):	DBD::ODBC - sterownik DBI do ODBC
 Name:		perl-DBD-ODBC
