@@ -8,13 +8,13 @@
 Summary:	DBD::ODBC - ODBC Driver for DBI
 Summary(pl):	DBD::ODBC - sterownik DBI do ODBC
 Name:		perl-DBD-ODBC
-Version:	1.12
+Version:	1.13
 Release:	1
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	c4fef6ba03485c4f77abec19bed2f8da
-BuildRequires:	perl-DBI > 1.20
+# Source0-md5:	9abf246e584ec6baa7b8e38c06ec42ef
+BuildRequires:	perl-DBI >= 1.21
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	unixODBC-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
