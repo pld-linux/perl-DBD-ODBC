@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without	tests	# Do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	DBD
@@ -45,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
