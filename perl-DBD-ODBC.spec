@@ -9,7 +9,7 @@ Summary:	DBD::ODBC - ODBC Driver for DBI
 Summary(pl):	DBD::ODBC - sterownik DBI do ODBC
 Name:		perl-DBD-ODBC
 Version:	1.09
-Release:	1
+Release:	2
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -30,6 +30,7 @@ ODBC.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %{__perl} -pi -e 's/.*(@\$\(NOOP\))/\t$1/' Makefile.PL
+%{__perl} -pi -e 's@/lib/libodbc@/%{_lib}/libodbc@' Makefile.PL
 
 %build
 %{__perl} Makefile.PL \
