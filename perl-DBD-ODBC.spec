@@ -9,12 +9,12 @@ Summary:	DBD::ODBC perl module
 Summary(pl):	Modu³ perla DBD::ODBC
 Name:		perl-DBD-ODBC
 Version:	1.04
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl-DBI > 1.20
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	unixODBC-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -29,7 +29,8 @@ ODBC.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL -o /usr
+%{__perl} Makefile.PL -o /usr \
+	INSTALLDIRS=vendor 
 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
@@ -47,8 +48,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_sitearch}/DBD/ODBC.pm
-%dir %{perl_sitearch}/auto/DBD/ODBC
-%{perl_sitearch}/auto/DBD/ODBC/ODBC.bs
-%attr(755,root,root) %{perl_sitearch}/auto/DBD/ODBC/ODBC.so
+%{perl_vendorarch}/DBD/ODBC.pm
+%dir %{perl_vendorarch}/auto/DBD/ODBC
+%{perl_vendorarch}/auto/DBD/ODBC/ODBC.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/DBD/ODBC/ODBC.so
 %{_mandir}/man3/*
