@@ -4,7 +4,7 @@
 Summary:	DBD::ODBC perl module
 Summary(pl):	Modu³ perla DBD::ODBC
 Name:		perl-DBD-ODBC
-Version:	0.41
+Version:	0.43
 Release:	1
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
@@ -34,6 +34,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+%{!?_without_test:%{__make} test}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
