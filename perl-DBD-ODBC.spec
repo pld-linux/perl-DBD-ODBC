@@ -29,7 +29,7 @@ ODBC.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-perl Makefile.PL -o /usr
+%{__perl} Makefile.PL -o /usr
 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
