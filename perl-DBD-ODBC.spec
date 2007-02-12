@@ -6,7 +6,7 @@
 %define		pdir	DBD
 %define		pnam	ODBC
 Summary:	DBD::ODBC - ODBC Driver for DBI
-Summary(pl):	DBD::ODBC - sterownik DBI do ODBC
+Summary(pl.UTF-8):   DBD::ODBC - sterownik DBI do ODBC
 Name:		perl-DBD-ODBC
 Version:	1.13
 Release:	1
@@ -22,8 +22,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 DBD::ODBC is DBD module interfacing the ODBC databases.
 
-%description -l pl
-DBD::ODBC jest modu³em DBD komunikuj±cym siê z bazami danych z u¿yciem
+%description -l pl.UTF-8
+DBD::ODBC jest moduÅ‚em DBD komunikujÄ…cym siÄ™ z bazami danych z uÅ¼yciem
 ODBC.
 
 %prep
