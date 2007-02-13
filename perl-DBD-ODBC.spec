@@ -6,7 +6,7 @@
 %define		pdir	DBD
 %define		pnam	ODBC
 Summary:	DBD::ODBC - ODBC Driver for DBI
-Summary(pl.UTF-8):   DBD::ODBC - sterownik DBI do ODBC
+Summary(pl.UTF-8):	DBD::ODBC - sterownik DBI do ODBC
 Name:		perl-DBD-ODBC
 Version:	1.13
 Release:	1
