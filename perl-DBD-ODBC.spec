@@ -9,7 +9,7 @@ Summary:	DBD::ODBC - ODBC Driver for DBI
 Summary(pl.UTF-8):	DBD::ODBC - sterownik DBI do ODBC
 Name:		perl-DBD-ODBC
 Version:	1.23
-Release:	2
+Release:	3
 # GPL or Artistic as specified in perl README file
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
