@@ -60,6 +60,5 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/DBD/ODBC.pm
 %{perl_vendorarch}/DBD/ODBC
 %dir %{perl_vendorarch}/auto/DBD/ODBC
-%{perl_vendorarch}/auto/DBD/ODBC/ODBC.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/DBD/ODBC/ODBC.so
 %{_mandir}/man3/*
