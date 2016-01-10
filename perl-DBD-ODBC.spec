@@ -8,13 +8,13 @@
 Summary:	DBD::ODBC - ODBC Driver for DBI
 Summary(pl.UTF-8):	DBD::ODBC - sterownik DBI do ODBC
 Name:		perl-DBD-ODBC
-Version:	1.43
-Release:	5
+Version:	1.52
+Release:	1
 # GPL or Artistic as specified in perl README file
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/DBD/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	35e37488170b5111f826226c4d466961
+# Source0-md5:	5f4eadbbb7f1ac6e77ab92276ccae573
 URL:		http://search.cpan.org/dist/DBD-ODBC/
 BuildRequires:	perl-DBI >= 1.21
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -31,10 +31,9 @@ ODBC.
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
-%{__perl} -pi -e 's/.*(@\$\(NOOP\))/\t$1/' Makefile.PL
-%{__perl} -pi -e 's@/lib/libodbc@/%{_lib}/libodbc@' Makefile.PL
-
 %build
+# pass PERL_MM_USE_DEFAULT to avoid threads warning prompt
+PERL_MM_USE_DEFAULT=1 \
 %{__perl} Makefile.PL \
 	-o /usr \
 	INSTALLDIRS=vendor
@@ -61,4 +60,4 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/DBD/ODBC
 %dir %{perl_vendorarch}/auto/DBD/ODBC
 %attr(755,root,root) %{perl_vendorarch}/auto/DBD/ODBC/ODBC.so
-%{_mandir}/man3/*
+%{_mandir}/man3/DBD::ODBC.3pm*
