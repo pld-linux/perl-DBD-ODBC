@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# Do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	DBD
 %define		pnam	ODBC
 Summary:	DBD::ODBC - ODBC Driver for DBI
